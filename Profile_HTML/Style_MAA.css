@@ -1,0 +1,537 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Images/3.png'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; /* Keeps the 
+    background in place when scrolling */
+    
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#5388ac ;
+    border:5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+
+nav h1 {
+    color: white;
+    
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    font-style: italic;
+    margin-top: -10px;
+   
+    
+}
+.typewriter {
+    display: inline-block;
+    border-right: 3px solid #5388ac;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end) forwards, blink 0.5s infinite;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+#darkModeToggle {
+    background: #ffb300; /* Bright yellow */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#darkModeToggle:hover {
+    background: #ff9800; 
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+/* Dark Mode */
+.dark-mode {
+    background-image: url('Images/background5.jpg'); /* Replace with a darker image */
+    background-color:black;  /* Fallback color */
+    
+}
+
+.dark-mode nav {
+    background: #444;
+
+}
+.dark-mode .subtitle {
+    color:#ddd;
+}
+.dark-mode .profile h1,
+.dark-mode .profile p{
+    color:white;
+}
+.dark-mode .profile img {
+    filter: brightness(0.8) contrast(1.2); /* Adjust image brightness */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .box {
+    background: #333;
+    color: white;
+    border-left: 5px solid #4CAF50;
+}
+.dark-mode .box h2{
+    color:#00bcd4;
+}
+.dark-mode .edu-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.dark-mode .edu-item p {
+    margin: 5px 0;
+    color: white;
+}
+.dark-mode .contacts a {
+    color: #00bcd4; /* Brighter link color */
+}
+
+.dark-mode .contacts a:hover {
+    text-decoration: underline;
+    color: #ff4081; /* Change color on hover */
+}
+.dark-mode footer {
+    background: #444;
+    border-left: 5px solid #4CAF50;
+}
+
+/* Profile Section */
+.profile {
+    padding:20px 10px;
+    text-align: center;
+    color:black;
+    
+}
+@keyframes pulseZoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.profile img {
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: pulseZoom 2.5s ease-in-out infinite;
+  
+    
+}
+
+.profile h1{
+    color: whitesmoke; 
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.profile p {
+    font-size: 18px;
+    color: whitesmoke; /* Softer dark gray */
+    font-style: italic;
+}
+
+/* Box Styling */
+.box {
+    background: #ffe699 ;
+    padding: 20px;
+    border-radius: 80px;
+     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    
+      
+}
+.box:hover {
+    transform: translateY(-5px); /* Hover effect */
+}
+
+
+.box h2 {
+    color: mediumblue;
+}
+#education {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#education h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.edu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.edu-item i {
+    font-size: 30px;
+    color: maroon;
+}
+
+.edu-item h3 {
+    margin: 0;
+    font-size: 15px;
+    color: black;
+}
+
+.edu-item p {
+    margin: 5px 0;
+    color: black;
+}
+
+/* Skills & Hobbies Lists */
+/* Personality Section Styling */
+/* Shared container style */
+.personality, .skills, .hobbies {
+  padding: 30px;
+  background: #ffe699;  /* same yellow background */
+  border-radius: 80px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* add soft shadow */
+  margin-bottom: 20px;
+}
+
+/* Headings */
+.personality h2, .skills h2, .hobbies h2 {
+  color: mediumblue;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* List styling */
+.personality ul, .skills ul, .hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.personality ul li, .skills ul li, .hobbies ul li {
+  font-size: 1.1em;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+}
+
+/* Icon before each item */
+.personality ul li::before, .skills ul li::before, .hobbies ul li::before {
+  content: "🌟";
+  font-size: 1.2em;
+  color: #5388ac;
+}
+
+/* Personality paragraph (and if you want, also in skills/hobbies) */
+.personality p, .skills p, .hobbies p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 15px;
+  font-style: italic;
+  color: black;
+}
+
+/* Dark mode */
+.dark-mode .personality, 
+.dark-mode .skills, 
+.dark-mode .hobbies {
+  background: #333;
+  color: white;
+  border-left: 5px solid #4CAF50;
+  box-shadow: none !important;
+}
+
+.dark-mode .personality h2, 
+.dark-mode .skills h2, 
+.dark-mode .hobbies h2 {
+  color: #00bcd4;
+}
+
+.dark-mode .personality ul li, 
+.dark-mode .skills ul li, 
+.dark-mode .hobbies ul li {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.dark-mode .personality p,
+.dark-mode .skills p, 
+.dark-mode .hobbies p {
+  color: white;
+  font-style: italic;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+    background: aqua;
+    border-radius: 20px;
+    margin-bottom: 50px; /* ✅ space before contacts */
+}
+
+/* Project Container */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Project Card */
+.project-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+    width: 250px; /* ✅ better width for real cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover img {
+    transform: scale(2.05);
+}
+
+/* Contact Section */
+.contacts {
+    padding: 40px 20px;
+    background: #ffe699; /* ✅ separate background */
+    border-radius: 80px;
+    margin: 50px auto;   /* ✅ spacing above and below */
+    text-align: center;
+    max-width: 900px;
+}
+
+.contacts h2 {
+    color: mediumblue;
+    margin-bottom: 20px;
+}
+
+.contacts a {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    margin: 8px 0;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.contacts i {
+    color: indianred;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.address-link {
+    text-decoration: none;
+    color: inherit;
+}
+.resume {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.resume-btn {
+  display: inline-block;
+  background: #4CAF50;   /* Green button */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #45a049;   /* Darker green on hover */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px; /* ✅ ensures footer is below contacts */
+    text-align: center;
+    background: #5388ac;
+    color: white;
+    padding: 15px 0;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+/* RESPONSIVE NAVIGATION */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Responsive Grid for Profile & Content */
+@media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile {
+        grid-column: span 3;
+    }
+
+    .contacts, .hobbies {
+        grid-column: span 2;
+    }
+}
+
+/* Responsive Project Section */
+@media (max-width: 1024px) 
+    .project-container {
+        flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+        justify-content: center;
+}
+    
+    .project-card {
+        width: 90%;
+    }
+
+    .project-card img {
+        height: 180px; /* Slightly smaller for better mobile fit */
+    }
+}
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Adjusting project cards for mobile */
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; /* Reduce width to fit small screens */
+    }
+
+    .project-card img {
+        height: 150px; /* Reduce image height */
+    }
+}
